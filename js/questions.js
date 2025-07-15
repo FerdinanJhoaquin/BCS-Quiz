@@ -847,7 +847,7 @@ let questions = [{
     },
     {
         num: 78,
-        question: "¿De que color era el vehiculo escandaoloso de Pryce?",
+        question: "¿De que color era el vehiculo escandaloso de Pryce?",
         answer: "Amarillo",
         options: [
             "Amarillo",
@@ -872,10 +872,10 @@ let questions = [{
         question: "¿Qué tipo de accidente sufre Kim Wexler?",
         answer: "Accidente de transito",
         options: [
-            "Accidente de transito",
-            "Accidente casero",
+            "Accidente de Transito",
+            "Accidente Casero",
             "Accidente Laboral",
-            "No sufre ningún accidente"
+            "No sufre un accidente"
         ]
     },
     {

@@ -38,6 +38,7 @@ function desordenarArray(array) {
 }
 
 
+
 function cargaPregunta(){
 
 	$('#textoPregunta').text(questionsGlobal[0].question);
@@ -46,14 +47,23 @@ function cargaPregunta(){
 
 function cargaRespuestas(){
 
-	$('#rpta1').text(questionsGlobal[0].options[0]);
-	$('#rpta2').text(questionsGlobal[0].options[1]);
-	$('#rpta3').text(questionsGlobal[0].options[2]);
-	$('#rpta4').text(questionsGlobal[0].options[3]);
-	$('#rpta1').val(questionsGlobal[0].options[0]);
-	$('#rpta2').val(questionsGlobal[0].options[1]);
-	$('#rpta3').val(questionsGlobal[0].options[2]);
-	$('#rpta4').val(questionsGlobal[0].options[3]);
+	var numbers = [3, 1, 0, 2];
+
+	numbers = desordenarArray(numbers);
+
+	valor1 = numbers[0]; 
+	valor2 = numbers[1]; 
+	valor3 = numbers[2]; 
+	valor4 = numbers[3]; 
+
+	$('#rpta1').text(questionsGlobal[0].options[valor1]);
+	$('#rpta2').text(questionsGlobal[0].options[valor2]);
+	$('#rpta3').text(questionsGlobal[0].options[valor3]);
+	$('#rpta4').text(questionsGlobal[0].options[valor4]);
+	$('#rpta1').val(questionsGlobal[0].options[valor1]);
+	$('#rpta2').val(questionsGlobal[0].options[valor2]);
+	$('#rpta3').val(questionsGlobal[0].options[valor3]);
+	$('#rpta4').val(questionsGlobal[0].options[valor4]);
 
 }
 
@@ -223,6 +233,17 @@ function actualizaQuestion(){
 function verificarLifes(){
 
 	if (lifes < 1){
+		sessionStorage.setItem('lifesPublic', lifes);
+		sessionStorage.setItem('questionsAnswers', questionCount);
+		sessionStorage.setItem('questionsPositives', questionPositivas);
+		sessionStorage.setItem('questionsNegatives', questionNegativas);
+		sessionStorage.setItem('timeHoras', hours);
+		sessionStorage.setItem('timeMinutos', minutes);
+		sessionStorage.setItem('timeSegundos', seconds);
+		window.location.href = "results.html";
+	}
+
+	if (questionCount == 100){
 		sessionStorage.setItem('lifesPublic', lifes);
 		sessionStorage.setItem('questionsAnswers', questionCount);
 		sessionStorage.setItem('questionsPositives', questionPositivas);
