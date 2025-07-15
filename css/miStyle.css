@@ -1,0 +1,89 @@
+*
+{
+  user-select: none;
+}
+.pictureSaul {
+  background-image: url("../img/saul_bcs_square.png"); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  background-position: bottom center;
+}
+
+.pictureQuestion {
+  background-image: url("../img/picture1.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.pictureAnimation {
+  animation-name: colorRandom;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colorRandom{
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.pictureMin
+{
+  background-image: url("../img/logo_bcs_quiz_square_white.png"); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom center;
+  min-height: 150px !important;
+}
+
+.pictureLifes
+{
+  background-image: url("../img/lifes_5.png"); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  background-position: bottom center;
+  min-height: 30px !important;
+  min-width: 30px !important;
+}
+
+.bi{
+  margin-top: 2px;
+  float: right;
+}
+
+.biInvisible{
+  float:left;
+}
+
+.modal-transparent{
+  background-color: rgba(0,0,0,0.75);
+}
+
+@media (max-width: 768px)
+{
+  .min-vh-50
+  {
+    min-height: 50vh !important;
+  }
+}
+
+.correcto{
+  color: #000 !important;
+  background-color: #f8f9fa !important;
+  border-color: #f8f9fa !important;
+}
+
+
+@media (min-width: 768px)
+{
+  .m-50-pic
+  {
+    max-width: 30vh !important;
+  }
+}
