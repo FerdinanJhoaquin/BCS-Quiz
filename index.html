@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>BCS Quiz</title>
+		<link rel="shortcut icon" href="./img/logo_bcs_quiz_square.png"/>
+		<link href="./css/bootstrap.css" rel="stylesheet">
+		<link href="./css/miStyle.css" rel="stylesheet">
+		<script src="./js/jquery-3.7.1.min.js"></script>
+		<script src="./js/bootstrap.js"></script>
+		<script src="./js/miScript.js"></script>
+		
+	</head>
+
+	<body class="bg-black fw-light text-white ">
+		<div class="container-fluid">
+			<div class="row min-vh-100">
+				<div class="col-sm order-md-2 order-sm-2 text-center d-flex align-items-center">
+					<div class="container-fluid g-0 text-center ">
+						<div class="row justify-content-center">
+							<img src="./img/logo_bcs_quiz_square_white.png" class="w-50 m-50-pic">
+						</div> 
+						<div class="row justify-content-center">
+							<button type="button" class="btn fw-light mt-2 btn-outline-light rounded-5 w-50" data-bs-toggle="modal" data-bs-target="#modalStart">Empezar</button>
+						</div>
+						<div class="row justify-content-center">
+							<button type="button" class="btn fw-light mt-2 btn-outline-light rounded-5 w-50" data-bs-toggle="modal" data-bs-target="#modalCredits">Créditos</button>
+						</div>
+						<div class="row justify-content-center">
+							<button type="button" class="btn fw-light btn-outline-light rounded-5 w-50 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#modalQuit">Salir</button>
+						</div>
+					</div>
+	      		</div>
+				<div class="col-sm pictureAnimation min-vh-50 pictureSaul order-md-1 order-sm-1">
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<div class="modal fade" id="modalCredits" tabindex="-1" aria-labelledby="modalCreditsLabel" aria-hidden="true">
+	 	<div class="modal-dialog modal-dialog-centered fw-light">
+	    	<div class="modal-content fw-light text-white border-white modal-transparent rounded-5">
+	      		<div class="modal-header" data-bs-theme="dark">
+	      			<img src="./img/logo_bcs_quiz_square_white.png" width="40" >
+	        		<h1 class="modal-title fs-5 fw-light ms-3" id="modalCreditsLabel">Better Call Saul Quiz</h1>
+	        		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      		</div>
+	      		<div class="modal-body fw-light">
+	        			Versión 1.0. <br>
+	        			Desarrollado por WithFer. <br>
+	        			Contacto: 
+	        			<a href="mailto:jhoaquinf.6@gmail.com" class="fw-light link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">jhoaquinf.6@gmail.com.</a>
+	      		</div>
+	      		<div class="modal-footer text-center fw-light">
+	        		<button type="button" class="btn btn-outline-light rounded-5 fw-light" data-bs-dismiss="modal" >Aceptar</button>
+	        		<a href="https://www.paypal.me/ferdinanjhoaquin" target="_blank">
+	        			<button type="button" class="btn btn-outline-light rounded-5 fw-light" >Colaborar</button>
+					</a>
+	      		</div>
+	    	</div>
+	  	</div>
+	</div>
+
+	<div class="modal fade" id="modalQuit" tabindex="-1" aria-labelledby="modalQuitLabel2" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered fw-light">
+			<div class="modal-content fw-light text-white border-white modal-transparent rounded-5">
+				<div class="modal-header" data-bs-theme="dark">
+					<img src="./img/logo_bcs_quiz_square_white.png" width="40" >
+					<h1 class="modal-title fs-5 fw-light ms-3" id="modalQuitLabel">Better Call Saul Quiz</h1>
+					<button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					¿Realmente desea salir de la página?
+				</div>
+				<div class="modal-footer text-center">
+					<button type="button" class="btn btn-outline-light rounded-5 " data-bs-dismiss="modal">Aceptar</button>
+					<button type="button" class="btn btn-outline-light rounded-5 " data-bs-dismiss="modal">Cancelar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalStart" tabindex="-1" aria-labelledby="modalQuitLabel2" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered  fw-light">
+			<div class="modal-content fw-light text-white border-white modal-transparent rounded-5">
+				<div class="modal-header" data-bs-theme="dark">
+					<img src="./img/logo_bcs_quiz_square_white.png" width="40" >
+					<h1 class="modal-title fs-5 fw-light ms-3" id="modalQuitLabel">Better Call Saul Quiz</h1>
+					<button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<ul class="g-0 mb-0">
+						<li>El quiz consta de 100 preguntas.</li>
+	        			<li>Tienes 5 oportunidades de fallar.</li>
+	        			<li>Se contabiliza el tiempo que demorarás.</li>
+	        		<ul>
+				</div>
+				<div class="modal-footer text-center">
+	        			<button type="button" class="btn btn-outline-light rounded-5 " data-bs-dismiss="modal" onclick="startQuiz();">Aceptar</button>
+					<button type="button" class="btn btn-outline-light rounded-5 " data-bs-dismiss="modal">Cancelar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</html>

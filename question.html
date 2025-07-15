@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="es" class="g-0 vw-100">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BCS Quiz</title>
+	<link rel="shortcut icon" href="./img/logo_bcs_quiz_square.png"/>
+	<link href="./css/bootstrap.css" rel="stylesheet">
+	<link href="./css/miStyle.css" rel="stylesheet">
+	<script src="./js/jquery-3.7.1.min.js"></script>
+	<script src="./js/bootstrap.js"></script>
+	<script src="./js/miScript.js"></script>
+	<script src="./js/questions.js"></script>
+	
+</head>
+
+	<body class="bg-black fw-light text-white">
+		<div class="container-fluid">
+			<div class="row min-vh-100">
+				<div class="col-sm min-vh-50 pictureQuestion order-md-1" id="pictureQuestionTmp">
+				</div>
+				<div class="col-sm order-md-2 text-center d-flex align-items-center g-0">
+					<div class="container-fluid text-center">
+						<div class="row justify-content-center pictureMin" >
+						</div>
+						<div class="row justify-content-center mb-2 mt-2">
+							<h5 class="fw-light mb-0" id="numQuestion">Pregunta 1</h5>
+						</div>
+						<div class="row justify-content-center mb-2 mt-2">
+							<h5 class="fw-light mb-2" id="textoPregunta">1.- ¿Aquí irá una pregunta de Better Call Saul?</h5>
+						</div>
+						<div class="row justify-content-center mb-1 mt-1">
+							<button type="button" class="btn fw-light btn-outline-light rounded-5 w-50 text-truncate" onclick="verificaRpta('0');" value="0" id="rpta1">Respuesta 1</button>
+						</div>
+						<div class="row justify-content-center mb-1 mt-1">
+							<button type="button" class="btn fw-light btn-outline-light rounded-5 w-50 text-truncate" onclick="verificaRpta('1');" value="0"id="rpta2">Respuesta 2</button>
+						</div>
+						<div class="row justify-content-center mb-1 mt-1">
+							<button type="button" class="btn fw-light btn-outline-light rounded-5 w-50 text-truncate" onclick="verificaRpta('2');" value="0"id="rpta3">Respuesta 3</button>
+							
+						</div>
+						<div class="row justify-content-center mb-1 mt-1">
+							<button type="button" class="btn fw-light btn-outline-light rounded-5 w-50 text-truncate" onclick="verificaRpta('3');" value="0" id="rpta4">Respuesta 4</button>
+						</div>
+						<div class="row justify-content-center mb-3 mt-3">
+							<h6 class="fw-light mb-0" id="timer">Tiempo utilizado 00:00:00</h6>
+						</div>
+						<div class="row justify-content-center mb-3 pictureLifes" id="picLifes">
+						</div>
+						<div class="row justify-content-center mb-2 mt-2">
+							<button type="button" class="btn fw-light btn-outline-light rounded-5 w-50 invisible" id="btnSiguiente" onclick="actualizaQuestion();">Siguiente</button>
+
+						</div>
+					</div>
+	      		</div>
+
+			</div>
+		</div>
+	</body>
+
+
+	<div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3 rounded-5" >
+  		<div id="toastCorrect" class="toast btn-outline-light  modal-transparent rounded-5" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+    		<div class="toast-body rounded-5 text-center border border-light">
+      			¡Respuesta Correcta!
+    		</div>
+  		</div>
+	</div>
+
+
+	<div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3 rounded-5" >
+  		<div id="toastIncorrect" class="toast btn-outline-light  modal-transparent rounded-5" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+    		<div class="toast-body rounded-5 text-center border border-light">
+      			¡Respuesta Incorrecta!
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modalTime" tabindex="-1" aria-labelledby="modalQuitLabel2" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered  fw-light">
+			<div class="modal-content fw-light text-white border-white modal-transparent rounded-5">
+				<div class="modal-header" data-bs-theme="dark">
+					<img src="./img/logo_bcs_quiz_square_white.png" width="40" >
+					<h1 class="modal-title fs-5 fw-light ms-3" id="modalQuitLabel">Better Call Saul Quiz</h1>
+					<button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					El tiempo se acabó.
+				</div>
+				<div class="modal-footer text-center">
+					<button type="button" class="btn btn-outline-light rounded-5 " data-bs-dismiss="modal">Aceptar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="./js/scriptQuiz.js"></script>
+
+</html>

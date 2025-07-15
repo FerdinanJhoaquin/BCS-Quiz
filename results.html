@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>BCS Quiz</title>
+		<link rel="shortcut icon" href="./img/logo_bcs_quiz_square.png"/>
+		<link href="./css/bootstrap.css" rel="stylesheet">
+		<link href="./css/miStyle.css" rel="stylesheet">
+		<script src="./js/bootstrap.js"></script>
+		<script src="./js/miScript.js"></script>
+		<script src="./js/jquery-3.7.1.min.js"></script>
+		<script src="./js/resultsQuery.js"></script>
+	</head>
+
+	<body class="bg-black fw-light text-white ">
+		<div class="container-fluid">
+			<div class="row min-vh-100">
+				<div class="col-sm order-md-2 order-sm-2 text-center d-flex align-items-center">
+					<div class="container-fluid g-0 text-center ">
+						<div class="row justify-content-center">
+							<img src="./img/logo_bcs_quiz_square_white.png" class="w-50 m-50-pic">
+						</div> 
+						<div class="row justify-content-center">
+							<h4 class="fw-light mb-2">Resultados</h4>
+						</div>
+						<div class="row justify-content-center">
+							<h5 class="fw-light mb-2" id="vidasRestantes">0 vidas restantes.</h5>
+						</div>
+						<div class="row justify-content-center">
+							<h5 class="fw-light mb-2" id="cantRespuestasCorrectas">0 respuestas correctas.</h5>
+						</div>
+						<div class="row justify-content-center">
+							<h5 class="fw-light mb-2" id="cantRespuestasIncorrectas">0 respuestas incorrectas.</h5>
+						</div>
+						<div class="row justify-content-center">
+							<h5 class="fw-light mb-2" id="textoTiempo">Demoraste 0 minutos y 0 segundos.</h5>
+						</div>
+						<div class="row justify-content-center">
+							<h5 class="fw-light mb-2" id="textoPregunta">Respondiste 0 preguntas de 0 posibles.</h5>
+						</div>
+						<div class="row justify-content-center">
+							<button type="button" class="btn fw-light btn-outline-light rounded-5 w-50 mt-2 mb-2" onclick="window.location.href='index.html'">Aceptar</button>
+						</div>
+						<div class="row justify-content-center">
+							<button type="button" class="btn fw-light btn-outline-light rounded-5 w-50 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#modalQuit">Salir</button>
+						</div>
+					</div>
+	      		</div>
+				<div class="col-sm pictureAnimation min-vh-50 pictureSaul order-md-1 order-sm-1">
+				</div>
+			</div>
+		</div>
+	</body>
+
+
+	<div class="modal fade" id="modalQuit" tabindex="-1" aria-labelledby="modalQuitLabel2" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered fw-light">
+			<div class="modal-content fw-light text-white border-white modal-transparent rounded-5">
+				<div class="modal-header" data-bs-theme="dark">
+					<img src="./img/logo_bcs_quiz_square_white.png" width="40" >
+					<h1 class="modal-title fs-5 fw-light ms-3" id="modalQuitLabel">Better Call Saul Quiz</h1>
+					<button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					¿Realmente desea salir de la página?
+				</div>
+				<div class="modal-footer text-center">
+					<button type="button" class="btn btn-outline-light rounded-5 " data-bs-dismiss="modal" onclick="window.close();">Aceptar</button>
+					<button type="button" class="btn btn-outline-light rounded-5 " data-bs-dismiss="modal">Cancelar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</html>
