@@ -24,6 +24,18 @@ $(document).ready(function() {
 	}
 	$("#textoPregunta").text("Respondiste "+questionsAnswerGlobal+" preguntas de 100 posibles.")
 
-	$("#textoTiempo").text("Demoraste "+questionMinutosGlobal+" minutos y "+questionSegundosGlobal+" segundos.");
+	if (questionMinutosGlobal > 1){
+		$("#textoTiempo").text("Demoraste "+questionMinutosGlobal+" minutos y "+questionSegundosGlobal+" segundos.");
+	}
+	else{
+		$("#textoTiempo").text("Demoraste "+questionMinutosGlobal+" minuto y "+questionSegundosGlobal+" segundos.");
+	}
+
+	if (questionHoraGlobal > 1 && questionMinutosGlobal == 1){
+		$("#textoTiempo").text("Demoraste "+ questionHoraGlobal +" horas y "+ questionMinutosGlobal+" minuto");
+	}
+	if (questionHoraGlobal > 1 && questionMinutosGlobal > 1){
+		$("#textoTiempo").text("Demoraste "+ questionHoraGlobal +" horas y "+ questionMinutosGlobal+" minutos");
+	}
 });
 
